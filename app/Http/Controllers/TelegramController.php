@@ -27,7 +27,7 @@ class TelegramController extends Controller
         $bot->onCallbackQueryData('channel {id}', SelectChannelHandler::class);
         $bot->onCallbackQueryData('approve-all {id}', ApproveAllRequestsHandler::class);
         $bot->onCommand('channel', ChannelConversation::class);
-        $bot->registerMyCommands();
+        // $bot->registerMyCommands();
         $bot->run();
     }
 }
