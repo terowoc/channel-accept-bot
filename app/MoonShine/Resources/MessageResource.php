@@ -16,7 +16,7 @@ class MessageResource extends Resource
 {
     public static string $model = Message::class;
 
-    public static string $title = 'Messages';
+    public static string $title = 'Rassilka';
 
     public static array $activeActions = ['create', 'show']; 
 

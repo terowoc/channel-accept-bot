@@ -31,7 +31,7 @@ class MoonShineServiceProvider extends ServiceProvider
                     ->icon('heroicons.user')
                     ->badge(fn () => \App\Models\User::count()),
 
-                MenuItem::make('Send to All', new MessageResource())
+                MenuItem::make('Rassilka', new MessageResource())
                     ->icon('heroicons.chat-bubble-bottom-center-text')
                     ->badge(fn () => \App\Models\Message::count()),
             ])->icon('users'),

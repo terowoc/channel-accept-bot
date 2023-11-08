@@ -23,7 +23,7 @@ class ChannelsCommand extends Command
         }
 
         $bot->sendMessage(
-            text: 'Channels:',
+            text: 'Kanallar:',
             reply_markup: $keyboard
         );
     }

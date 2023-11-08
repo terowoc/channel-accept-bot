@@ -12,7 +12,7 @@ class MessageHandler
         $chatId = $bot->userId();
 
         if (mb_stripos($text, "instagram.com/") !== false) {
-            $caption = "$text\n\n@test orqali yuklab olingan";
+            $caption = "$text\n\n@swiftsave_bot orqali yuklab olingan.";
             $bot->sendMessage('🎥 Iltimos kuting...');
             $url = json_decode(file_get_contents("https://shaha.u11117.xvest2.ru/Video%20Downloader/insta4.php?url=" . $text), true);
 

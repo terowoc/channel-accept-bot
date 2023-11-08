@@ -16,10 +16,10 @@ class SelectChannelHandler
         $channel = Channel::find($id);
         $keyboard = InlineKeyboardMarkup::make()
             ->addRow(
-                InlineKeyboardButton::make('Approve all requests', callback_data: 'approve-all '.$id),
+                InlineKeyboardButton::make('Barcha so\'rovlarni qabul qilish', callback_data: 'approve-all '.$id),
             )
             ->addRow(
-                InlineKeyboardButton::make('Cencel', callback_data: 'cencel'),
+                InlineKeyboardButton::make('Bekor qilish', callback_data: 'cencel'),
             );
 
         $bot->editMessageText(

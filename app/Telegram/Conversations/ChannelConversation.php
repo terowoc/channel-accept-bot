@@ -37,18 +37,18 @@ class ChannelConversation extends Conversation
                         ];
                         Channel::firstOrCreate($data);
 
-                        $bot->sendMessage('Kanal muvaffaqiyatli qo\'shildi !', $userId);
+                        $bot->sendMessage('Kanal muvaffaqiyattli qo\'shildi!', $userId);
                     } else {
-                        $bot->sendMessage('Faqat kanaldan qoshish mumkin!');
+                        $bot->sendMessage('Faqat kanal qoshish mumkin!');
                     }
                 } catch (Exception $e) {
-                    $bot->sendMessage('Faqat kanaldan qoshish mumkin!', $userId);
+                    $bot->sendMessage('Faqat kanal qoshish mumkin!', $userId);
                 }
             }else{
                 $bot->sendMessage('Siz kanal yaratuvchisi yoki administratori emassiz!');
             }
         } catch (\Exception $e) {
-            $bot->sendMessage('Botga admin berilmagan', $userId);
+            $bot->sendMessage('Kanal qo\'shish uchun iltimos avval botni kanalizda admin qilgandan so\'ng kanaldan botga post forward qiling!', $userId);
         }
         $this->end();
     }
