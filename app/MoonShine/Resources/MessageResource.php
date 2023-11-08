@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use MoonShine\Actions\FiltersAction;
 use MoonShine\Fields\ID;
 use MoonShine\Fields\Image;
-use MoonShine\Fields\Textarea;
 use MoonShine\Fields\Text;
+use MoonShine\Fields\Textarea;
 use MoonShine\Fields\Url;
 use MoonShine\Resources\Resource;
 
@@ -18,7 +18,7 @@ class MessageResource extends Resource
 
     public static string $title = 'Rassilka';
 
-    public static array $activeActions = ['create', 'show']; 
+    public static array $activeActions = ['create', 'show'];
 
     public function fields(): array
     {

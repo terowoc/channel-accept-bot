@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
+use App\MoonShine\Resources\ChannelResource;
 use App\MoonShine\Resources\MessageResource;
 use App\MoonShine\Resources\UserResource;
-use App\MoonShine\Resources\ChannelResource;
 use Illuminate\Support\ServiceProvider;
 use MoonShine\Menu\MenuGroup;
 use MoonShine\Menu\MenuItem;

@@ -18,6 +18,6 @@ class Channel extends Model
 
     public static function requests($chat_id)
     {
-        return $this->all()->where('chat_id', $chat_id);        
-    } 
+        return $this->all()->where('chat_id', $chat_id);
+    }
 }

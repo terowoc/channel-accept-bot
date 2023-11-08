@@ -11,10 +11,10 @@ class MessageHandler
         $text = $bot->message()->text;
         $chatId = $bot->userId();
 
-        if (mb_stripos($text, "instagram.com/") !== false) {
+        if (mb_stripos($text, 'instagram.com/') !== false) {
             $caption = "$text\n\n@swiftsave_bot orqali yuklab olingan.";
             $bot->sendMessage('🎥 Iltimos kuting...');
-            $url = json_decode(file_get_contents("https://shaha.u11117.xvest2.ru/Video%20Downloader/insta4.php?url=" . $text), true);
+            $url = json_decode(file_get_contents('https://shaha.u11117.xvest2.ru/Video%20Downloader/insta4.php?url='.$text), true);
 
             if (empty($url)) {
                 $bot->sendMessage('Yuklab olish imkoni yo\'q');
@@ -26,7 +26,7 @@ class MessageHandler
                     foreach ($url as $key => $value) {
                         $content[] = ['type' => $types[$value['type']], 'media' => $value['link']];
                     }
-                    $content[0]['caption'] = $caption . "\n" . $url[0]['title'];
+                    $content[0]['caption'] = $caption."\n".$url[0]['title'];
                     $bot->sendMediaGroup(media: $content);
                     exit;
                 } else {
@@ -36,14 +36,14 @@ class MessageHandler
                         case 'photo':
                             $bot->sendPhoto(
                                 photo: $url[0]['link'],
-                                caption: $caption . "\n" . $url[0]['title']
+                                caption: $caption."\n".$url[0]['title']
                             );
                             break;
 
                         case 'video':
                             $bot->sendVideo(
                                 video: $url[0]['link'],
-                                caption: $caption . "\n" . $url[0]['title']
+                                caption: $caption."\n".$url[0]['title']
                             );
                             break;
                     }
@@ -52,6 +52,6 @@ class MessageHandler
             }
         }
 
-            // $bot->deleteMessage($bot->chatId(), $bot->messageId());
+        // $bot->deleteMessage($bot->chatId(), $bot->messageId());
     }
 }

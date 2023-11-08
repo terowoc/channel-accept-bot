@@ -6,11 +6,11 @@ use App\Telegram\Commands\ChannelsCommand;
 use App\Telegram\Commands\InfoCommand;
 use App\Telegram\Commands\StartCommand;
 use App\Telegram\Conversations\ChannelConversation;
-use App\Telegram\Handlers\CanJoinRequestHandler;
-use App\Telegram\Handlers\MessageHandler;
-use App\Telegram\Handlers\CencelCommandHandler;
-use App\Telegram\Handlers\SelectChannelHandler;
 use App\Telegram\Handlers\ApproveAllRequestsHandler;
+use App\Telegram\Handlers\CanJoinRequestHandler;
+use App\Telegram\Handlers\CencelCommandHandler;
+use App\Telegram\Handlers\MessageHandler;
+use App\Telegram\Handlers\SelectChannelHandler;
 use SergiX44\Nutgram\Nutgram;
 use SergiX44\Nutgram\Telegram\Properties\MessageType;
 

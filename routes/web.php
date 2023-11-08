@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Channel;
 use Illuminate\Support\Facades\Route;
 use SergiX44\Nutgram\Nutgram;
 

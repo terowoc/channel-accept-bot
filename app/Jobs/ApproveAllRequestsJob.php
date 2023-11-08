@@ -2,14 +2,13 @@
 
 namespace App\Jobs;
 
+use App\Models\Channel;
+use App\Models\Request;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Channel;
-use App\Models\Request;
 use Nutgram\Laravel\Facades\Telegram;
 
 class ApproveAllRequestsJob implements ShouldQueue
@@ -21,7 +20,8 @@ class ApproveAllRequestsJob implements ShouldQueue
     /**
      * Create a new job instance.
      */
-    public function __construct($id){
+    public function __construct($id)
+    {
         $this->id = $id;
     }
 

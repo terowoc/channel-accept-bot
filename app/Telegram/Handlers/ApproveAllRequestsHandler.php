@@ -2,8 +2,8 @@
 
 namespace App\Telegram\Handlers;
 
-use SergiX44\Nutgram\Nutgram;
 use App\Jobs\ApproveAllRequestsJob;
+use SergiX44\Nutgram\Nutgram;
 
 class ApproveAllRequestsHandler
 {

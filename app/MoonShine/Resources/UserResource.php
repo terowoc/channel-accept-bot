@@ -15,7 +15,7 @@ class UserResource extends Resource
 
     public static string $title = 'Users';
 
-    public static array $activeActions = ['delete', 'show']; 
+    public static array $activeActions = ['delete', 'show'];
 
     public function fields(): array
     {

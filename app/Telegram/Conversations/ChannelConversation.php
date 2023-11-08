@@ -21,8 +21,8 @@ class ChannelConversation extends Conversation
 
         try {
             $getChatMemberStatus = $bot->getChatMember($chatId, $userId)->status->value;
-            if($getChatMemberStatus == "creator" or $getChatMemberStatus == "administrator"){
-                
+            if ($getChatMemberStatus == 'creator' or $getChatMemberStatus == 'administrator') {
+
                 try {
                     $type = $bot->getChat($chatId)->type->value;
                     $title = $bot->getChat($chatId)->title;
@@ -44,7 +44,7 @@ class ChannelConversation extends Conversation
                 } catch (Exception $e) {
                     $bot->sendMessage('Faqat kanal qoshish mumkin!', $userId);
                 }
-            }else{
+            } else {
                 $bot->sendMessage('Siz kanal yaratuvchisi yoki administratori emassiz!');
             }
         } catch (\Exception $e) {

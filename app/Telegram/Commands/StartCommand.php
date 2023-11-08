@@ -19,7 +19,7 @@ class StartCommand extends Command
             'chat_id' => $bot->user()->id,
         ];
         User::firstOrCreate($data);
-        $bot->sendMessage('👋 Salom, ' . $bot->user()->first_name . ' !
+        $bot->sendMessage('👋 Salom, '.$bot->user()->first_name.' !
             
 🇺🇿 Video yuklash uchun LINK Yuboring!
 🇷🇺 Отправьте ссылку на видео.

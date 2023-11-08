@@ -15,7 +15,7 @@ class ChannelResource extends Resource
 
     public static string $title = 'Channels';
 
-    public static array $activeActions = ['delete', 'show']; 
+    public static array $activeActions = ['delete', 'show'];
 
     public function fields(): array
     {
