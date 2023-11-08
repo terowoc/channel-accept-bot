@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Channel;
 use Illuminate\Support\Facades\Route;
+use SergiX44\Nutgram\Nutgram;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/bot', function (Nutgram $bot) {
+    return 1111111;
+});
+
+Route::post('/webhook', App\Http\Controllers\TelegramController::class);
