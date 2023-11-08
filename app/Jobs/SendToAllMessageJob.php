@@ -47,14 +47,14 @@ class SendToAllMessageJob implements ShouldQueue
                     chat_id: $user->chat_id,
                     reply_markup: $keyboard,
                     caption: $this->message->content,
-                    parse_mode: 'html'
+                    parse_mode: 'markdown'
                 );
             } else {
                 Telegram::sendMessage(
                     text: $this->message->content,
                     chat_id: $user->chat_id,
                     reply_markup: $keyboard,
-                    parse_mode: 'html'
+                    parse_mode: 'markdown'
                 );
 
             }
